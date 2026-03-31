@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log
+build
+.DS_Store
+.git
+.gitignore
+README.md
+.env
+.env.local
+.vscode
+.idea
+target
+.mvn
+mvnw
+mvnw.cmd
+*.log

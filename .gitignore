@@ -1,0 +1,21 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Node
+**/node_modules/
+**/npm-debug.log*
+**/yarn-error.log*
+
+# Java / Maven
+**/target/
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Env files
+**/.env
+**/.env.*
+
+# Build artifacts
+**/dist/
+**/build/
