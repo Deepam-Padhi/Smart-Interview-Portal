@@ -109,29 +109,19 @@ Services:
 - Backend: `http://localhost:8080`
 - PostgreSQL: `localhost:5432`
 
-## Railway Deployment
+## Render Deployment
 
-Deploy backend and frontend as separate services from the same repository.
+Render deployment has a dedicated guide:
 
-1. Create a new Railway project.
-2. Add PostgreSQL plugin.
-3. Create backend service:
-   - Dockerfile Path: `backend/Dockerfile`
-   - Keep root context as repository root.
-4. Create frontend service:
-   - Dockerfile Path: `frontend/Dockerfile`
-   - Keep root context as repository root.
-5. Set frontend variable:
-   - `REACT_APP_API_BASE_URL=https://<backend-domain>/api`
-6. Redeploy frontend after setting the variable.
+- See `RENDER_DEPLOYMENT_GUIDE.md`
 
-Backend uses Railway PostgreSQL variables automatically:
+Quick summary:
 
-- `PGHOST`
-- `PGPORT`
-- `PGDATABASE`
-- `PGUSER`
-- `PGPASSWORD`
+1. Create PostgreSQL on Render.
+2. Deploy backend as a Web Service using `backend/Dockerfile`.
+3. Deploy frontend as a Static Site from `frontend/`.
+4. Set `REACT_APP_API_BASE_URL` to your backend URL + `/api`.
+5. Redeploy frontend after variable update.
 
 ## Configuration Notes
 
